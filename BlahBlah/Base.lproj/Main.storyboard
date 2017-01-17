@@ -1,26 +1,118 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cyh-qh-s3K">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Login View Controller-->
+        <scene sceneID="bgS-nr-KUd">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="cyh-qh-s3K" customClass="LoginViewController" customModule="BlahBlah" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="gYc-AR-32A"/>
+                        <viewControllerLayoutGuide type="bottom" id="wAg-Va-ziq"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="XNA-9F-Qe5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="hyM-QI-Tnj">
+                                <rect key="frame" x="0.0" y="0.0" width="1125" height="2001"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onJ-7F-Hj3">
+                                <rect key="frame" x="38" y="225" width="243" height="30"/>
+                                <state key="normal" title="Login Anonymously">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginAnonymouslyTapped:" destination="cyh-qh-s3K" eventType="touchUpInside" id="S9a-Sz-fkf"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OrLine" translatesAutoresizingMaskIntoConstraints="NO" id="qqt-76-x6g">
+                                <rect key="frame" x="38" y="263" width="243" height="45"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JbU-Af-Gjd" customClass="GIDSignInButton">
+                                <rect key="frame" x="38" y="316" width="243" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qqt-76-x6g" firstAttribute="top" secondItem="onJ-7F-Hj3" secondAttribute="bottom" constant="8" id="7N1-Yb-25P"/>
+                            <constraint firstItem="qqt-76-x6g" firstAttribute="leading" secondItem="XNA-9F-Qe5" secondAttribute="leadingMargin" constant="22" id="U6N-5p-XXr"/>
+                            <constraint firstItem="onJ-7F-Hj3" firstAttribute="leading" secondItem="XNA-9F-Qe5" secondAttribute="leadingMargin" constant="22" id="VS5-6u-Mjm"/>
+                            <constraint firstItem="qqt-76-x6g" firstAttribute="top" secondItem="onJ-7F-Hj3" secondAttribute="bottom" constant="8" id="WLA-jD-OQL"/>
+                            <constraint firstItem="onJ-7F-Hj3" firstAttribute="top" secondItem="gYc-AR-32A" secondAttribute="bottom" constant="205" id="cHj-YL-VMo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="onJ-7F-Hj3" secondAttribute="trailing" constant="23" id="jBj-z6-vp2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qqt-76-x6g" secondAttribute="trailing" constant="23" id="nSe-wa-b8O"/>
+                            <constraint firstItem="qqt-76-x6g" firstAttribute="top" secondItem="onJ-7F-Hj3" secondAttribute="bottom" constant="8" id="wUD-7h-S7H"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="anonymousButton" destination="onJ-7F-Hj3" id="Fko-sG-pJT"/>
+                        <outlet property="googSignIn" destination="JbU-Af-Gjd" id="CBe-kV-RdM"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PqK-h8-2AG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="787.5" y="57.04225352112676"/>
+        </scene>
+        <!-- Chats-->
+        <scene sceneID="R0V-WI-7UZ">
+            <objects>
+                <viewController storyboardIdentifier="ChatVC" id="85t-vb-U7s" customClass="ChatViewController" customModule="BlahBlah" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8PR-mg-ciW"/>
+                        <viewControllerLayoutGuide type="bottom" id="f1k-xM-ELd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dn2-jl-BxB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title=" Chats" id="voi-ef-9oW">
+                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="p2n-IV-Dyc">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="logOutTapped:" destination="85t-vb-U7s" id="1MZ-Ba-ms0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kcR-9L-HWp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3061.875" y="273.59154929577466"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="khd-Ha-ajG">
+            <objects>
+                <navigationController storyboardIdentifier="NaviVC" automaticallyAdjustsScrollViewInsets="NO" id="M2d-av-4EM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LwJ-lP-YYD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.055668620052202737" green="0.23488466920082288" blue="0.37335421954314718" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="85t-vb-U7s" kind="relationship" relationship="rootViewController" id="P1o-4b-6ao"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gbe-qm-bDQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2064.375" y="273.59154929577466"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="OrLine" width="864" height="45"/>
+        <image name="backgroundPhoto" width="1125" height="2001"/>
+    </resources>
 </document>
