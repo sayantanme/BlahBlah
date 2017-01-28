@@ -18,6 +18,14 @@
 		390527011E263009005B8B64 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390527001E263009005B8B64 /* ChatViewController.swift */; };
 		390527031E26435C005B8B64 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 390527021E26435C005B8B64 /* GoogleService-Info.plist */; };
 		390527051E2750B8005B8B64 /* BlahHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390527041E2750B8005B8B64 /* BlahHelper.swift */; };
+		390527071E2F52C6005B8B64 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390527061E2F52C6005B8B64 /* RegistrationViewController.swift */; };
+		390527091E2F88EA005B8B64 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390527081E2F88EA005B8B64 /* ContactsViewController.swift */; };
+		39842C271E3B389900772D46 /* MessagesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39842C261E3B389900772D46 /* MessagesTVC.swift */; };
+		399701051E39C44600216228 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399701041E39C44600216228 /* Extensions.swift */; };
+		3997010A1E3A1F3700216228 /* ChatLogCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399701091E3A1F3700216228 /* ChatLogCVC.swift */; };
+		399D72301E3D2A3C006A4053 /* UserMessagesColVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D722F1E3D2A3C006A4053 /* UserMessagesColVC.swift */; };
+		39F42D461E3B5D48005C8190 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F42D451E3B5D48005C8190 /* Messages.swift */; };
+		39F838841E33B7A800F948FA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F838831E33B7A800F948FA /* User.swift */; };
 		4354F56CEB9DA4CA088D0858 /* Pods_BlahBlah.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E228588FD67F5BAC4A70A53A /* Pods_BlahBlah.framework */; };
 		D11D8AB2CC720DEA17CF3169 /* Pods_BlahBlahUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7940FE2F8E74D7EA5C44356 /* Pods_BlahBlahUITests.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +65,14 @@
 		390527001E263009005B8B64 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		390527021E26435C005B8B64 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		390527041E2750B8005B8B64 /* BlahHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlahHelper.swift; sourceTree = "<group>"; };
+		390527061E2F52C6005B8B64 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		390527081E2F88EA005B8B64 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		39842C261E3B389900772D46 /* MessagesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesTVC.swift; sourceTree = "<group>"; };
+		399701041E39C44600216228 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		399701091E3A1F3700216228 /* ChatLogCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogCVC.swift; sourceTree = "<group>"; };
+		399D722F1E3D2A3C006A4053 /* UserMessagesColVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMessagesColVC.swift; sourceTree = "<group>"; };
+		39F42D451E3B5D48005C8190 /* Messages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		39F838831E33B7A800F948FA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		57F7C284D9644AE2A5F40ED1 /* Pods-BlahBlahTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlahBlahTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlahBlahTests/Pods-BlahBlahTests.debug.xcconfig"; sourceTree = "<group>"; };
 		985D06CBA7995F5D505D019B /* Pods-BlahBlahTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlahBlahTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlahBlahTests/Pods-BlahBlahTests.release.xcconfig"; sourceTree = "<group>"; };
 		B7940FE2F8E74D7EA5C44356 /* Pods_BlahBlahUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlahBlahUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,15 +136,16 @@
 		390526D01E24D3B6005B8B64 /* BlahBlah */ = {
 			isa = PBXGroup;
 			children = (
+				399D722E1E3D2A0A006A4053 /* Views */,
+				399701081E3A1BD800216228 /* View Controllers */,
+				399701031E39C3F800216228 /* Helpers */,
+				39F838821E33B77700F948FA /* Model */,
 				390526D11E24D3B6005B8B64 /* AppDelegate.swift */,
-				390526D31E24D3B6005B8B64 /* LoginViewController.swift */,
 				390526D51E24D3B6005B8B64 /* Main.storyboard */,
 				390526D81E24D3B6005B8B64 /* Assets.xcassets */,
 				390526DA1E24D3B6005B8B64 /* LaunchScreen.storyboard */,
 				390526DD1E24D3B6005B8B64 /* Info.plist */,
 				390527021E26435C005B8B64 /* GoogleService-Info.plist */,
-				390527001E263009005B8B64 /* ChatViewController.swift */,
-				390527041E2750B8005B8B64 /* BlahHelper.swift */,
 			);
 			path = BlahBlah;
 			sourceTree = "<group>";
@@ -151,6 +168,28 @@
 			path = BlahBlahUITests;
 			sourceTree = "<group>";
 		};
+		399701031E39C3F800216228 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				390527041E2750B8005B8B64 /* BlahHelper.swift */,
+				399701041E39C44600216228 /* Extensions.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		399701081E3A1BD800216228 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				390526D31E24D3B6005B8B64 /* LoginViewController.swift */,
+				390527001E263009005B8B64 /* ChatViewController.swift */,
+				390527061E2F52C6005B8B64 /* RegistrationViewController.swift */,
+				390527081E2F88EA005B8B64 /* ContactsViewController.swift */,
+				399701091E3A1F3700216228 /* ChatLogCVC.swift */,
+				39842C261E3B389900772D46 /* MessagesTVC.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		399917283C7E6C815F1FF6D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +198,23 @@
 				B7940FE2F8E74D7EA5C44356 /* Pods_BlahBlahUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		399D722E1E3D2A0A006A4053 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				399D722F1E3D2A3C006A4053 /* UserMessagesColVC.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		39F838821E33B77700F948FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				39F838831E33B7A800F948FA /* User.swift */,
+				39F42D451E3B5D48005C8190 /* Messages.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		A2F73B6F9ABA342301DB9C2E /* Pods */ = {
@@ -460,9 +516,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				390526D41E24D3B6005B8B64 /* LoginViewController.swift in Sources */,
+				39842C271E3B389900772D46 /* MessagesTVC.swift in Sources */,
+				3997010A1E3A1F3700216228 /* ChatLogCVC.swift in Sources */,
 				390527011E263009005B8B64 /* ChatViewController.swift in Sources */,
+				39F838841E33B7A800F948FA /* User.swift in Sources */,
+				399701051E39C44600216228 /* Extensions.swift in Sources */,
+				39F42D461E3B5D48005C8190 /* Messages.swift in Sources */,
 				390527051E2750B8005B8B64 /* BlahHelper.swift in Sources */,
+				399D72301E3D2A3C006A4053 /* UserMessagesColVC.swift in Sources */,
 				390526D21E24D3B6005B8B64 /* AppDelegate.swift in Sources */,
+				390527071E2F52C6005B8B64 /* RegistrationViewController.swift in Sources */,
+				390527091E2F88EA005B8B64 /* ContactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

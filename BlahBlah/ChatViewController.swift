@@ -46,7 +46,7 @@ class ChatViewController: JSQMessagesViewController {
             print(error.localizedDescription)
         }
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let loginVC = storyBoard.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
+        let loginVC = storyBoard.instantiateViewController(withIdentifier: "TabBarVc")
         let appdel = UIApplication.shared.delegate as! AppDelegate
         appdel.window?.rootViewController = loginVC
     }

@@ -15,6 +15,9 @@ class LoginViewController: UIViewController,GIDSignInUIDelegate,GIDSignInDelegat
 
     @IBOutlet weak var anonymousButton: UIButton!
     @IBOutlet weak var googSignIn: GIDSignInButton!
+
+    @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var txtEmail: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -28,10 +31,10 @@ class LoginViewController: UIViewController,GIDSignInUIDelegate,GIDSignInDelegat
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print(FIRAuth.auth()?.currentUser)
+        print(FIRAuth.auth()?.currentUser ?? "No user")
         FIRAuth.auth()?.addStateDidChangeListener({ (auth:FIRAuth, user:FIRUser?) in
             if user != nil {
-                BlahHelper.helper.switchToNavigationController()
+                BlahHelper.helper.switchToAppNavigationController()
             }
         })
     }
@@ -41,11 +44,18 @@ class LoginViewController: UIViewController,GIDSignInUIDelegate,GIDSignInDelegat
     }
 
     @IBAction func loginAnonymouslyTapped(_ sender: UIButton) {
-        BlahHelper.helper.loginAnonymously()
+        guard !(txtEmail.text == "" || txtPassword.text == "") else {
+            let alert = UIAlertController(title: "Error", message: "Need to fill all fields", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        BlahHelper.helper.loginWithUsernameAndPassword(email: txtEmail.text!, password: txtPassword.text!)
     }
     
     @IBAction func googleSignInTapped(_ sender: UIButton) {
     }
+    
     
     // MARK: - Google Sign In Delegate methods
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {

@@ -26,7 +26,33 @@ class BlahHelper {
             print("uid:\(anonymousUser?.uid)")
             let newUser = FIRDatabase.database().reference().child("Users").child(anonymousUser!.uid)
             newUser.setValue(["displayName":"anonymous","id":"\((anonymousUser?.uid)!)","profileUrl":"","email":""])
-            self.switchToNavigationController()
+            self.switchToAppNavigationController()
+        })
+        
+    }
+    
+    func createUserWithEmailAndPassword(name: String?, email: String?, password: String) {
+        
+        FIRAuth.auth()?.createUser(withEmail: email!, password: password, completion: { (user:FIRUser?, error:Error?) in
+            guard error == nil else{
+                print(error!.localizedDescription)
+                return
+            }
+            
+            let newUser = FIRDatabase.database().reference().child("Users").child(user!.uid)
+            newUser.setValue(["displayName":name,"id":"\((user?.uid)!)","profileUrl":"","email":email,"password":password])
+            self.switchToAppNavigationController()
+
+        })
+    }
+    
+    func loginWithUsernameAndPassword(email: String, password: String){
+        FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user:FIRUser?, error:Error?) in
+            guard error == nil else{
+                print(error!.localizedDescription)
+                return
+            }
+            self.switchToAppNavigationController()
         })
         
     }
@@ -43,13 +69,20 @@ class BlahHelper {
             print(user?.email! ?? "no email")
             let newUser = FIRDatabase.database().reference().child("Users").child(user!.uid)
             newUser.setValue(["displayName":"\((user?.displayName)!)","id":"\((user?.uid)!)","profileUrl":"\((user?.photoURL)!)","email":"\((user?.email)!)"])
-            self.switchToNavigationController()
+            self.switchToAppNavigationController()
         })
     }
     
     func switchToNavigationController(){
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let naviVC = storyBoard.instantiateViewController(withIdentifier: "NaviVC") as! UINavigationController
+        let appDel = UIApplication.shared.delegate as! AppDelegate
+        appDel.window?.rootViewController = naviVC
+    }
+    
+    func switchToAppNavigationController(){
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let naviVC = storyBoard.instantiateViewController(withIdentifier: "appNavigation") as! UITabBarController
         let appDel = UIApplication.shared.delegate as! AppDelegate
         appDel.window?.rootViewController = naviVC
     }
